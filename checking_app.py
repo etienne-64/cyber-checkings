@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from colorama import Fore, Back, Style
-from checking_app_helpers import clear_screen, menu_display, get_my_ip, get_ip_info,get_apache_log_info
+from checking_app_helpers import clear_screen, menu_display, get_my_ip, get_ip_info,get_apache_log_info, get_failed_login
 
 
 if __name__ == '__main__':
@@ -36,6 +36,9 @@ if __name__ == '__main__':
                 print(f"rank: {counter[ip]} - ip: {ip_info['ip']} - country: {ip_info['country_name']} - city: {ip_info['city']}")
 
             input("")
+        elif app_option == '4':
+            pass
+            get_failed_login()
         else:
             print("Bye !")
             break

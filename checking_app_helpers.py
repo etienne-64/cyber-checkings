@@ -18,7 +18,7 @@ def menu_display():
     print("(1) Get infos on my external ip")
     print("(2) Get infos on list of ip (from file: one ip / line)")
     print("(3) Analyse Apache access.log")
-    print("(4) ")
+    print("(4) Failed login")
 
     print("(0) Exit\n")
 
@@ -54,3 +54,7 @@ def get_apache_log_info(file_path)->Counter:
             else:
                 break
     return Counter(ips)
+
+def get_failed_login():
+    last = subprocess.check_output(["lastb"])
+    print(last)
